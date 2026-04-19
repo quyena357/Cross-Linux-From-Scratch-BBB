@@ -156,7 +156,7 @@ chmod +x fix_bbb_config.sh
 After configuring the kernel, build the ARM kernel image and device tree blobs:
 
 ```bash
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- zImage dtbs -j4
+make ARCH=${CLFS_ARCH} CROSS_COMPILE=${CLFS_TARGET}-
 ```
 
 This should produce `zImage` and `dtbs/am335x-boneblack.dtb` in the kernel build tree.
